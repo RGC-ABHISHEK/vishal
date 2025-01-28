@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio</title>
+        <style> 
+           /* Footer Styling */
+.footer {
+    background-color: #121212; /* Dark background */
+    color: #fff;
+    padding: 3rem 1.5rem;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.footer__about, .footer__social {
+    flex: 1;
+    text-align: left;
+}
+
+.footer__title {
+    font-size: 1.4rem;
+    color: #e91e63; /* Accent color */
+    margin-bottom: 1rem;
+}
+
+.footer__text {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.footer__contact li, .footer__social-links li {
+    margin-bottom: 0.5rem;
+}
+
+.footer__link {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer__link:hover {
+    color: #e91e63;
+}
+
+.footer__social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer__social-link {
+    font-size: 1.5rem;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.footer__social-link:hover {
+    color: #e91e63;
+}
+
+/* Bottom Section */
+.footer__bottom {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+.footer__bottom p {
+    margin: 0;
+    color: #bbb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer__container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer__about, .footer__social {
+        margin-bottom: 2rem;
+    }
+}
+
+                        /* ===== ABOUT SECTION ===== */
+.about {
+    padding: 5rem 1rem;
+
+    color: #fff;
+}
+
+.about__container {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+/* About Text */
+.about__data {
+    flex: 1 1 50%;
+    text-align: left;
+}
+
+.section__title {
+    font-size: 2.8rem;
+    color: #e91e63;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    animation: fadeIn 1s ease-out;
+}
+
+.section__text {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    color: #f1f1f1;
+    animation: fadeInUp 1.2s ease-out;
+}
+
+.highlight {
+    color: #e91e63;
+    font-weight: bold;
+}
+
+.about__skills {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+    animation: fadeInUp 1.4s ease-out;
+}
+
+.about__skills li {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #fff;
+}
+
+.about__skills li i {
+    color: #e91e63;
+    font-size: 1.2rem;
+}
+
+.about__button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    background-color: #e91e63;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.about__button:hover {
+    background-color: #c2185b;
+    transform: scale(1.1);
+}
+
+/* About Image */
+.about__media {
+    flex: 1 1 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about__img-container {
+    position: relative;
+    max-width: 400px;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+    animation: zoomIn 1s ease-out;
+}
+
+.about__img {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.about__img-container:hover .about__img {
+    transform: scale(1.1);
+}
+
+.about__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1rem;
+    padding: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.about__img-container:hover .about__overlay {
+    opacity: 1;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes zoomIn {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+        </style>
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <!-- ICONS BOXICONS -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+    <body>
+        <!-- ===== HEADER =====-->
+        <header class="l-header">
+            <nav class="nav bd-grid">
+                <a href="#" class="nav__logo">Portfolio</a>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu-alt-right'></i>
+                </div>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#index" class="nav__link">Home</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                        <li class="nav__item"><a href="work.html" class="nav__link">Work</a></li>
+                        <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <!-- ===== HOME =====-->
+            <div class="home">
+                <div class="parallax home__parallax home__parallax-img1" data-rellax-speed="-9"><img src="assets/img/imgm1.png"></div>
+                <div class="parallax home__parallax home__parallax-img2" data-rellax-speed="-7"><img src="assets/img/imgm2.png"></div>
+                <div class="parallax home__parallax home__parallax-img3" data-rellax-speed="-6"><img src="assets/img/imgm3.png"></div>
+                <div class="parallax home__parallax home__parallax-img4" data-rellax-speed="-3"><img src="assets/img/imgm4.png"></div>
+
+                <h1 class="parallax home__title" data-rellax-speed="-6">Vishal Verma</h1>
+                <span class="parallax home__subtitle" data-rellax-speed="-5">Graphic Designer</span> 
+
+                
+            </div>
+<!-- ===== SECTION =====-->
+<section class="l-section" id="about">
+    <div class="section">
+        <div class="section__data">
+            <h2 class="section__title">I'am Vishal</h2>
+            <p class="section__text">Hi, I’m Vishal, a passionate Graphic Designer and Web Developer with a knack for creating visually stunning and aesthetic designs. With years of experience in designing and coding, I specialize in crafting dynamic digital experiences that blend functionality with beauty. I thrive on pushing creative boundaries, whether it's designing eye-catching thumbnails, sleek visuals, or versatile graphic designs. My goal is to turn ideas into captivating creations that leave a lasting impression. When I’m not designing, I’m exploring the latest trends in graphic design, honing my skills, and finding inspiration in art, technology, and the world around me.</p>
+        </div>
+
+        <img src="assets/img/imgm.jpg" alt="" class="section__img">
+    </div>
+</section>
+<div class="home__scroll">
+    <a href="about.html"><i class='bx bx-mouse'></i></a>
+ </div>
+ <!-- ===== ABOUT SECTION =====-->
+ <section class="l-section" id="about" >
+    <div class="section">
+        <!-- Left Content -->
+        <div class="section__data">
+            <h2 class="section__title">About Me</h2>
+            <p class="section__text">
+                Hello! I’m <span class="highlight">Vishal Verma</span>, a creative Graphic Designer and Web Developer passionate about crafting immersive digital experiences.
+                My work revolves around merging functionality and aesthetics to produce designs that are as intuitive as they are stunning.
+            </p>
+            <p class="section__text">
+                Over the years, I’ve honed my skills in <span class="highlight">3D design</span>, <span class="highlight">visual storytelling</span>, and <span class="highlight">web development</span>. 
+                I specialize in creating sleek, modern, and highly aesthetic websites that resonate with users.
+            </p>
+            <ul class="about__skills">
+                <li><i class='bx bx-check'></i> Graphic Design</li>
+                <li><i class='bx bx-check'></i> 3D Modeling</li>
+                <li><i class='bx bx-check'></i> UX/UI Design</li>
+                <li><i class='bx bx-check'></i> Web Development</li>
+            </ul>
+            <a href="contact.html" class="button about__button">Let’s Connect</a>
+        </div>
+
+
+    </div>
+</section>
+
+<!-- ===== FOOTER =====-->
+<footer class="footer">
+    <div class="footer__container">
+        <!-- Left Side: About & Contact -->
+        <div class="footer__about">
+            <h3 class="footer__title">Vishal Verma</h3>
+            <p class="footer__text">Creative Graphic Designer & Web Developer</p>
+            <ul class="footer__contact">
+                <li><a href="mailto:vishal@example.com" class="footer__link">Email: vishal@example.com</a></li>
+                <li><a href="tel:+1234567890" class="footer__link">Phone: +1 234 567 890</a></li>
+            </ul>
+        </div>
+
+        <!-- Right Side: Social Media Links -->
+        <div class="footer__social">
+            <h3 class="footer__title">Follow Me</h3>
+            <ul class="footer__social-links">
+                <li><a href="https://www.linkedin.com/in/vishal-verma" class="footer__social-link" target="_blank"><i class='bx bxl-linkedin'></i></a></li>
+                <li><a href="https://github.com/vishal-verma" class="footer__social-link" target="_blank"><i class='bx bxl-github'></i></a></li>
+                <li><a href="https://twitter.com/vishal_verma" class="footer__social-link" target="_blank"><i class='bx bxl-twitter'></i></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Bottom Section: Copyright -->
+    <div class="footer__bottom">
+        <p>&copy; 2025 Vishal Verma. All rights reserved.</p>
+    </div>
+</footer>
+
+
+</main>
+        <!-- RELLAX JS -->
+        <script src="assets/js/rellax.min.js"></script>
+
+        <!-- GSAP -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+
+        <!-- SCROLL REVEAL -->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!-- MAIN JS -->
+        <script src="assets/js/main.js"></script>
+
+    </body>
+</html>
