@@ -45,5 +45,5 @@ When updating content, consider:
 
 ## Creator
 
-Abhishek
-Contact- 9795300888, miabhi195@gmail.com
+- Abhishek
+- Contact- 9795300888, miabhi195@gmail.com
